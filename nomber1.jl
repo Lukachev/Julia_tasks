@@ -24,4 +24,4 @@ function inverse_side(side::HorizonSide)::HorizonSide
     return inv_side
 end
 
-mark_cross!(Robot("pole69.sit", animate=true))
+mark_cross!(Robot("pole1.sit", animate=true))
