@@ -20,6 +20,12 @@ function way_back!(r::Robot, path::Vector{Tuple{HorizonSide, Int}})
     inv_path = inversed_path(path)
     way!(r, inv_path)
 end
+    
+function moves!(r::Robot, side::HorizonSide, n_steps::Int)
+    for i in 1:n_steps
+        move!(r, side)
+    end
+end
 
 function way!(r::Robot, path::Vector{Tuple{HorizonSide, Int}})
     for step in path
