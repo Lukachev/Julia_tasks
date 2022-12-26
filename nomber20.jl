@@ -9,6 +9,10 @@ function get_on_through_rec!(r::Robot, side::HorizonSide, n_steps::Int = 0)
     end
 end
 
+function next_side(side::HorizonSide)::HorizonSide
+    return HorizonSide((Int(side) + 1) % 4)
+end
+
 function along!(robot, side, num_steps)
     n_steps = 0
     while !isborder(robot, side) && n_steps < num_steps
